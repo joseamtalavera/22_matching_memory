@@ -3,7 +3,7 @@ import { CardRow } from './cardRow/cardRow.js';
 // Add import statements below
 import { useSelector } from 'react-redux';
 import { selectBoard } from './boardSlice.js';
-import { selectVisibleIDs } from './boardSlice.js';
+//import { selectVisibleIDs } from './boardSlice.js';
 
 
 export const Board = () => {
