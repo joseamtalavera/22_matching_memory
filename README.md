@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# React Redux Matching Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a card matching game built with React and Redux. The game board is a set of cards, each with a word related to Redux. The goal of the game is to match pairs of cards with the same word.
 
-## Available Scripts
+## Game Components
 
-In the project directory, you can run:
+The game consists of two main components:
 
-### `npm start`
+1. `Card`: This component represents a single card on the board. It uses Redux hooks to dispatch actions and access the state of the game. It handles the logic for flipping cards and matching pairs of cards.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. `Board`: This component represents the game board. It uses the `Card` component to render the cards on the board.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Redux Store
 
-### `npm test`
+The state of the game is managed with Redux. The store contains the state of the board, which is an array of card objects. Each card has an `id`, `contents`, `visible`, and `matched` property.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Redux slice for the game includes:
 
-### `npm run build`
+- Actions for setting the board, flipping a card, and resetting the cards.
+- A reducer that handles these actions and updates the state of the game accordingly.
+- Selectors for accessing the board and the IDs of the visible and matched cards from the state.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the Game
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the game, navigate to the project directory and run `npm start`. This will start the game in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Testing
 
-### `npm run eject`
+To run the tests for the game, navigate to the project directory and run `npm test`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Building for Production
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To build the game for production, navigate to the project directory and run `npm run build`. This will create a `build` folder with the production-ready files.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more about the technologies used in this project by visiting the following links:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Create React App](https://facebook.github.io/create-react-app/docs/getting-started)
